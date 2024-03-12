@@ -16,7 +16,7 @@ public class Simulation {
         for (int i = 0; i < numberOfTosses; i++) {
             total = dice.rollDice(numberOfDice);
             results.incrementBin(total);
-        }
+        } 
         return results;
     }
 
