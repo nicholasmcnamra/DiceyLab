@@ -10,9 +10,6 @@ public class Simulation {
         this.numberOfDice = numberOfDice;
         this.numberOfTosses = numberOfTosses;
     }
-
-
-
     public int runSimulation() {
         int total = 0;
         for (int i = 0; i < numberOfTosses; i++) {
