@@ -6,7 +6,7 @@ public class Bins {
    private HashMap<Integer, Integer> results = new HashMap<>();
 
    public Bins(int numberOfDice) {
-      for (int i = numberOfDice; i <= numberOfDice*6; i++) {
+       for (int i = numberOfDice; i <= numberOfDice*6; i++) {
          results.put(i, 0);
       }
    }
@@ -17,13 +17,11 @@ public class Bins {
    public void incrementBin(int binNumber) {
       try {
       results.put(binNumber, results.get(binNumber) + 1);
-//         System.out.println(binNumber + "value = " + results.get(binNumber));
       } catch (Exception e) {
-//         results.putIfAbsent()
       }
    }
 
-   // Get amount in bin
+   // Get value in bin
    public Integer getBin(int bin) {
       try {
          // NullPointerException I think?

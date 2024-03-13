@@ -1,8 +1,7 @@
-import java.util.*;
-
 public class Simulation {
     private int numberOfDice;
     private int numberOfTosses;
+    private double percentage;
     Dice dice = new Dice();
     Bins results;
 
@@ -19,8 +18,14 @@ public class Simulation {
         }
     }
 
+    //how do I get this method to work inside of print results?
+//    public void getPercentage() {
+//        for (int i = numberOfDice; i <= numberOfDice*6; i++) {
+//            percentage = ((double) results.getBin(i) / ((double) numberOfTosses));
+//        }
+//    }
+
     public void printResults() {
-        runSimulation();
         for (int i = numberOfDice; i <= numberOfDice*6; i++) {
             double percentage = ((double) results.getBin(i)/ ((double) numberOfTosses));
                 System.out.println(String.format("%-2d :  %,7d  :  %8.2f", i, results.getBin(i), percentage));
