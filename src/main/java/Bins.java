@@ -1,6 +1,8 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class Bins {
+
    private HashMap<Integer, Integer> results = new HashMap<>();
 
    public Bins(int numberOfDice) {
@@ -12,11 +14,10 @@ public class Bins {
    }
 
    // Change amount in bin
-   public void incrementBin(int bin) {
+   public void incrementBin(int binNumber) {
       try {
-      results.put(bin, results.get(bin) + 1);
-////         results.put();
-         // NullPointerException I think?
+      results.put(binNumber, results.get(binNumber) + 1);
+//         System.out.println(binNumber + "value = " + results.get(binNumber));
       } catch (Exception e) {
 //         results.putIfAbsent()
       }
@@ -24,12 +25,11 @@ public class Bins {
 
    // Get amount in bin
    public Integer getBin(int bin) {
-//      try {
-////         results.get()
-//         // NullPointerException I think?
-//      } catch (Exception e) {
-////         return
-//      }
+      try {
+         // NullPointerException I think?
+      } catch (Exception e) {
+//         return
+      }
       return results.get(bin);
    }
 }
